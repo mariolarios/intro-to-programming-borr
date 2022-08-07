@@ -15,3 +15,36 @@ skills.forEach((skill) => {
   skillItem.innerText = skill;
   skillsList.appendChild(skillItem);
 });
+
+const messageForm = document.getElementsByName("leave_message");
+
+messageForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const { name, email, message } = e.target;
+  addMessageToList({
+    name: name.value,
+    email: email.value,
+    message: message.value,
+  });
+
+  messageForm.reset();
+});
+
+const messageList = document.getElementById("message-list");
+
+const addMessageToList = ({ name, email, message }) => {
+  const newMessage = document.createElement("li");
+
+  newMessage.innerHTML = `
+        <span>
+        <a href="mailto:${email}">${name}</a>
+        wrote: ${message} 
+        <button onclick="removeButton(${id})" type="button" id="removeButton"> Remove </button>
+        </span>
+        `;
+  const removeButton = document.getElementById("removeButton");
+
+  messageList.appendChild(newMessage);
+  document.getElementById("messages").classList.remove("hideSection");
+};
