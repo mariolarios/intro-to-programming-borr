@@ -38,4 +38,3 @@ messageForm.addEventListener("submit", function (e) {
 
   messages_list.appendChild(newMessage);
 });
-//
