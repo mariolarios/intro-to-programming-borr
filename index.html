@@ -3,6 +3,7 @@
     <head>
         <title></title>
         <meta>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <h1>Mario Larios</h1>
@@ -24,28 +25,25 @@
             <h2>Leave a message</h2>
             <form name="leave_message">
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" required="true">
+                <input type="text" name="name" id="name">
         
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required="true">
+                <input type="email" name="email" id="email">
         
-                <label for="Message">Enter message here...</label>
-                <textarea name="message" id= "message" required="true"></textarea> 
-                <button type="submit" id="submit">Submit</button>
+                <label for="message">Enter message here...</label>
+                <input type="text" name="message" id= "message">
+                
+                <button id="submit" type"button">Submit</button>
         
             </form>
         </section>
         
-        <section id="message-list">
+        <section>
             <h2>Messages</h2>
-            <ul>
-        
-            </ul>
+            <ul id="message-list"></ul>
         </section>
           
-        <footer>
-
-        </footer>   
+        <footer></footer>   
            
     <script src="index.js" ></script>      
      </body>
