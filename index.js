@@ -2,6 +2,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const messageForm = document.querySelector("form[name=leave_message]");
 
+// footer section
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 copyright.innerText = "Mario Larios " + thisYear;
@@ -16,8 +17,8 @@ skills.forEach((skill) => {
   skillItem.innerText = skill;
   skillsList.appendChild(skillItem);
 });
-/// messages section
 
+/// messages section
 var names = document.getElementById("name").innerHTML;
 var emails = document.getElementById("email").innerHTML;
 var messages = document.querySelector("#messages");
@@ -30,7 +31,7 @@ messageForm.addEventListener("submit", function (e) {
   const newMessage = document.createElement("li");
   newMessage.classList.add("list__item");
   newMessage.innerHTML = `<div>
-   <span class="strong">${document.querySelector("#messages")}</span>
+   <span class="strong">${document.querySelector("#message")}</span>
    <p>${now.toLocaleString()} from <a class="link" href="mailto:${
     emails.value
   }">${names.value}</a> &nbsp;</p>
