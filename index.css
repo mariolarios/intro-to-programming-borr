@@ -31,8 +31,7 @@ h6 {
 }
 
 #name,
-#email,
-#message {
+#email {
   margin-bottom: 0.8rem;
   padding-right: 80px;
 }
