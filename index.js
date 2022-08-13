@@ -1,7 +1,7 @@
 const today = new Date();
 const thisYear = today.getFullYear();
-const messageForm = document.querySelector("form[name=leave_message]");
-
+const now = new Date();
+// footer section
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 copyright.innerText = "Mario Larios " + thisYear;
@@ -16,25 +16,40 @@ skills.forEach((skill) => {
   skillItem.innerText = skill;
   skillsList.appendChild(skillItem);
 });
+
 /// messages section
-
-var names = document.getElementById("name").innerHTML;
-var emails = document.getElementById("email").innerHTML;
-var messages = document.querySelector("#messages");
-var button = document.getElementById("submit");
+var messageForm = document.querySelector("form[name=leave_message]");
 var messages_list = document.getElementById("message-list");
-const now = new Date();
-
-messageForm.addEventListener("submit", function (e) {
+messageForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  const formFields = e.target;
+  const name = formFields.name.value;
+  const email = formFields.email.value;
+  const message = formFields.message.value;
+  console.log(formFields.name.value);
+  console.log(formFields.email.value);
+  console.log(formFields.message.value);
+
   const newMessage = document.createElement("li");
   newMessage.classList.add("list__item");
   newMessage.innerHTML = `<div>
-   <span class="strong">${document.querySelector("#messages")}</span>
-   <p>${now.toLocaleString()} from <a class="link" href="mailto:${
-    emails.value
-  }">${names.value}</a> &nbsp;</p>
- </div>`;
+  <span class="strong">${JSON.stringify(message)}</span>
+  <p>${now.toLocaleString()} from <a class="link" href="mailto:${JSON.stringify(
+    email
+  )}">${JSON.stringify(name)}</a> &nbsp;</p>
+</div>`;
 
   messages_list.appendChild(newMessage);
+
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+  newMessage.appendChild(removeButton);
+
+  removeButton.addEventListener("click", function (e) {
+    const entry = e.target.parentNode;
+    entry.remove();
+  });
+
+  e.target.reset();
 });

@@ -1,0 +1,54 @@
+body {
+  background-color: #aec6cf;
+  color: #2b2b4a;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+#my-name {
+  text-align: center;
+  font-size: xx-large;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+#experience-list,
+#skills-list {
+  color: #00009c;
+  font-weight: bold;
+}
+
+#label {
+  color: #00009c;
+  font-size: 17px;
+}
+
+#name,
+#email {
+  margin-bottom: 0.8rem;
+  padding-right: 80px;
+}
+
+#submit {
+  background-color: #a9a9a9;
+  color: orangered;
+}
+
+#footer {
+  background-color: gold;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media (min-width: 600px) {
+  * {
+    font-size: 1.15rem;
+  }
+}
