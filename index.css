@@ -1,15 +1,20 @@
 body {
-  background-color: #aec6cf;
+  background-color: #f1faee;
   color: #2b2b4a;
   display: flex;
   flex-direction: column;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  flex: 1;
 }
 #my-name {
   text-align: center;
-  font-size: xx-large;
+  font-size: 100px;
+  background-color: #1d3557;
+  color: gold;
+  padding-bottom: 1rem;
 }
+
 h2,
 h3,
 h4,
