@@ -1,54 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #aec6cf;
   color: #2b2b4a;
   display: flex;
   flex-direction: column;
-  font-family: "Inter", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
+  flex: 1;
+  background-color: #8ecae6;
 }
+
 #my-name {
+  cursor: pointer;
   text-align: center;
-  font-size: xx-large;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
+  font-size: 70px;
+  background-image: url("background-pattern-design-79.jpeg");
+  /* background-color: #1d3557; */
+  color: gold;
+  padding: 2rem;
+  padding-top: 3rem;
+  margin: 0;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
 
-#experience-list,
-#skills-list {
-  color: #00009c;
-  font-weight: bold;
+.nav_links {
+  text-align: center;
+  list-style: none;
 }
 
-#label {
-  color: #00009c;
-  font-size: 17px;
+.nav_links li {
+  display: inline-block;
+  padding: 0px 70px;
+  margin-bottom: 4rem;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 9px 25px;
+  font-size: 27px;
+  font-weight: bold;
+  background-color: #1d3557;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: gold;
+}
+
+.nav_links li a:hover {
+  color: gold;
+}
+
+button {
+  padding: 9px 25px;
+  color: white;
+  background-color: #19470f;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: gold;
+  color: black;
+}
+
+main {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main section {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fefff2;
+}
+
+main h1 {
+  font-size: 25px;
+  border-style: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 10px;
+  color: white;
+  background-color: #23238e;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
 }
 
 #name,
-#email {
-  margin-bottom: 0.8rem;
-  padding-right: 80px;
+#email,
+#submit {
+  margin: 1rem;
+}
+
+#name,
+#email,
+#message {
+  border: none;
+  appearance: none;
+  background: #c1c1c1;
+  padding: 12px;
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
 }
 
 #submit {
-  background-color: #a9a9a9;
-  color: orangered;
+  margin-left: 0;
+}
+
+#message-list {
+  padding: 2rem;
 }
 
 #footer {
-  background-color: gold;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
+  padding: 1rem;
+  background-color: gold;
 }
+
+#label {
+  font-weight: bold;
+}
+
 
 @media (min-width: 600px) {
   * {
-    font-size: 1.15rem;
+    font-size: 1.16rem;
   }
 }
