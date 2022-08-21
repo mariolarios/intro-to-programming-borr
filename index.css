@@ -36,7 +36,7 @@ header {
   padding-left: 0.5rem;
 }
 
-#my-name:hover{
+#my-name:hover {
   color: #d3d3d3;
 }
 
@@ -66,7 +66,7 @@ header {
 
 .nav_links li a:hover {
   color: #fbbc05;
-  background-color:#2d2d2d ;
+  background-color: #2d2d2d;
 }
 
 button {
@@ -115,17 +115,15 @@ ul {
   list-style-type: none;
 }
 
-
-
-#skills ul li{
-  display:inline-block;
+#skills ul li {
+  display: inline-block;
   border-style: none;
   color: white;
   background-color: #db4437;
   border-radius: 10px;
   margin: 1rem;
   padding: 15px;
-} 
+}
 
 #name,
 #email,
