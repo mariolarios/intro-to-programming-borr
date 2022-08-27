@@ -54,21 +54,35 @@ messageForm.addEventListener("submit", (e) => {
   e.target.reset();
 });
 
-const githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/mariolarios/repos");
-// githubRequest.onload = function () {};
-githubRequest.send();
+fetch("https://api.github.com/users/mariolarios/repos")
+.then(response=> response.json())
+.then((data)=>{
+    console.log(data);
+    const projectSection=document.getElementById("projects");
+    const projectList=projectSection.querySelector("ul");
+    for(let i=0; i < data.length; i++ ){
+        const project=document.createElement("li");
+        project.innerHTML=`<a href="${data[i].html_url}">${data[i].name}</a>`;
+        projectList.appendChild(project)}
+    })
+.catch(error => {
+    alert(error)
+})
+// const githubRequest = new XMLHttpRequest();
+// githubRequest.open("GET", "https://api.github.com/users/mariolarios/repos");
+// // githubRequest.onload = function () {};
+// githubRequest.send();
 
-githubRequest.addEventListener("load", function () {
-  const repositories = JSON.parse(this.response);
-  console.log(repositories);
+// githubRequest.addEventListener("load", function () {
+//   const repositories = JSON.parse(this.response);
+//   console.log(repositories);
 
-  const projectSection = document.querySelector("#projects");
-  const projectList = projectSection.querySelector("ul");
+//   const projectSection = document.querySelector("#projects");
+//   const projectList = projectSection.querySelector("ul");
 
-  for (let i = 0; i < repositories.length; i++) {
-    const project = document.createElement("li");
-    project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
-    projectList.appendChild(project);
-  }
-});
+//   for (let i = 0; i < repositories.length; i++) {
+//     const project = document.createElement("li");
+//     project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
+//     projectList.appendChild(project);
+//   }
+// });
