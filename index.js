@@ -6,7 +6,7 @@ const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 copyright.innerText = "Mario Larios " + thisYear;
 footer.appendChild(copyright);
-
+// skills section
 const skills = ["Javascript", "HTML", "CSS"];
 const skillsSection = document.getElementById("skills");
 const skillsList = document.getElementById("skills-list");
@@ -40,7 +40,7 @@ messageForm.addEventListener("submit", (e) => {
 </div>`;
 
   messages_list.appendChild(newMessage);
-
+// create remove button
   const removeButton = document.createElement("button");
   removeButton.innerText = "remove";
   removeButton.type = "button";
@@ -53,21 +53,24 @@ messageForm.addEventListener("submit", (e) => {
 
   e.target.reset();
 });
-
+// use fetch to show Github repos
 fetch("https://api.github.com/users/mariolarios/repos")
-.then(response=> response.json())
-.then((data)=>{
+  .then((response) => response.json())
+  .then((data) => {
     console.log(data);
-    const projectSection=document.getElementById("projects");
-    const projectList=projectSection.querySelector("ul");
-    for(let i=0; i < data.length; i++ ){
-        const project=document.createElement("li");
-        project.innerHTML=`<a href="${data[i].html_url}">${data[i].name}</a>`;
-        projectList.appendChild(project)}
-    })
-.catch(error => {
-    alert(error)
-})
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+    for (let i = 0; i < data.length; i++) {
+      const project = document.createElement("li");
+      project.innerHTML = `<a href="${data[i].html_url}">${data[i].name}</a>`;
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    alert(error);
+  });
+
+
 // const githubRequest = new XMLHttpRequest();
 // githubRequest.open("GET", "https://api.github.com/users/mariolarios/repos");
 // // githubRequest.onload = function () {};

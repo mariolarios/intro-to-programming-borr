@@ -36,9 +36,6 @@ header {
   padding-left: 0.5rem;
 }
 
-#my-name:hover {
-  color: #d3d3d3;
-}
 
 .nav_links {
   text-align: center;
@@ -168,4 +165,3 @@ ul {
     font-size: 1.16rem;
   }
 }
-
