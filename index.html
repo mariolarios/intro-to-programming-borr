@@ -23,12 +23,11 @@
 <body>    
  <main>   
     <section class="sections" id="about"><h2>About</h2>
-            <p>I am learning to code, I enjoy computers, video games and
-                playing with my dog.</p>
+            <p>I am learning front end web development with HTML, CSS, and Javascript, I also enjoy writing programs with Python. On my free time I like to play video games, go for runs and play with my dog. I look forward to learning and working with back end technologies more in depth.</p>
         </section> 
 
         <section class="sections" id="experience"><h2>Experience</h2>
-            <p><ul id="experience-list" >Apex Medical - 6 years</ul></p>
+            <p><ul id="experience-list" >Apex Medical - 7 years</ul></p>
         </section> 
 
         <section class="sections" id="skills"><h2>Skills</h2>
@@ -59,7 +58,7 @@
 
                 <div>
                 <label id="label" for="message">Enter message here...</label>
-                <textarea class="field_input" name="message" id= "message" required></textarea>
+                <input type="text" name="message" id="message" required >
                 </div>
 
                 <div>
@@ -78,9 +77,22 @@
             <li><a href="#my-name">Return to top</a></li>
             </ul>
     </nav>
-        <footer id="footer"></footer> 
+
+        <footer id="footer">
+            <button id="git_button">
+                <a href="https://github.com/mariolarios">
+                <span class="button__icon">
+                    <ion-icon name="logo-github"></ion-icon>
+                </span>
+            </a>
+    
+            </button>
+        </footer> 
+        
            
-    <script src="index.js" ></script>      
+    <script src="index.js" ></script>   
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>   
      </body>
    
      
