@@ -4,10 +4,10 @@ const now = new Date();
 // footer section
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
-copyright.innerText = "Mario Larios " + thisYear;
+copyright.innerText = "© Mario Larios " + thisYear;
 footer.appendChild(copyright);
 // skills section
-const skills = ["Javascript", "HTML", "CSS"];
+const skills = ["Javascript", "HTML", "CSS", "Python"];
 const skillsSection = document.getElementById("skills");
 const skillsList = document.getElementById("skills-list");
 
@@ -42,7 +42,7 @@ messageForm.addEventListener("submit", (e) => {
   messages_list.appendChild(newMessage);
 // create remove button
   const removeButton = document.createElement("button");
-  removeButton.innerText = "remove";
+  removeButton.innerText = "Remove";
   removeButton.type = "button";
   newMessage.appendChild(removeButton);
 
